@@ -11,25 +11,9 @@ export class ProjectsComponent implements OnInit {
   projects2 = [];
   projects3 = [
     {
-      link: "https://github.com/sarthakgoenka/portfolio",
+      link: "https://github.com/jenaruDev/portfolio.git",
     },
-    {
-      link: "",
-    },
-    {
-      link: "https://natours-8aa57.web.app/",
-    },
-    {
-      link:""
-    },
-    {
 
-      link: "http://node-room-chat.herokuapp.com/",
-    },
-    {
-      link: "https://personal-doc.herokuapp.com/",
-
-    }
   ]
   constructor(public apollo: Apollo) { }
 
@@ -39,7 +23,7 @@ export class ProjectsComponent implements OnInit {
     this.apollo.query<any>({
       query: gql`
       {
-      user(login: "sarthakgoenka") {
+      user(login: "jenaruDev") {
         pinnedItems(first: 6, types: [REPOSITORY]) {
           totalCount
           edges {
